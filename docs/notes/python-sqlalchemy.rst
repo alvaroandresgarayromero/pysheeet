@@ -35,6 +35,18 @@ output:
     postgres://postgres:postgres@192.168.99.100:5432
     sqlite:///db.sqlite
 
+Set a database URL - PostgresSQL
+-----------------------------------
+.. code-block:: python
+    # configure flask application to use POSTGRESQL dialect
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres@localhost:5432/todoapp'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+    # Pass flask app and config database to init sql alchemy
+    db = SQLAlchemy(app)
+    migrate = Migrate(app, db)
+
 
 Sqlalchemy Support DBAPI - PEP249
 -----------------------------------
