@@ -39,6 +39,7 @@ Set a database URL - PostgresSQL
 -----------------------------------
 
 .. code-block:: python
+
     # configure flask application to use POSTGRESQL dialect
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres@localhost:5432/todoapp'
