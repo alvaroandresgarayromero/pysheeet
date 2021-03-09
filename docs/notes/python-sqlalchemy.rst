@@ -50,7 +50,7 @@ Set a database URL - PostgresSQL
     migrate = Migrate(app, db)
 
 
-Set a database URL - PostgresSQL
+Set up Flask-Migration Database Version Control
 -----------------------------------
 
 .. code-block:: bash
