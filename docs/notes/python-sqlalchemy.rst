@@ -37,6 +37,7 @@ output:
 
 Set a database URL - PostgresSQL
 -----------------------------------
+
 .. code-block:: python
     # configure flask application to use POSTGRESQL dialect
     app = Flask(__name__)
