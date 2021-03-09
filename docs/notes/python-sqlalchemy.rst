@@ -50,6 +50,32 @@ Set a database URL - PostgresSQL
     migrate = Migrate(app, db)
 
 
+Set a database URL - PostgresSQL
+-----------------------------------
+
+.. code-block:: bash
+
+    # path must be in flask project workspace
+    $ flask db init
+      Creating directory .../migrations ...  done
+
+    # similar to git commit/add changes
+    $ flask db migrate
+      Generating
+      .../migrations/versions/fa0ae55bcfce_.py ...  done
+
+    # similar to pushing changes into main branch
+    # in this case it is pushing changes into the database
+    $ flask db upgrade
+    INFO  [alembic.runtime.migration] Running upgrade  -> fa0ae55bcfce, empty message
+
+    # similar to going to the previous git commit ID
+    # In this case it is undoing changes done to the database
+    $ flask db downgrade
+    INFO  [alembic.runtime.migration] Running downgrade fa0ae55bcfce -> , empty message
+
+
+
 Sqlalchemy Support DBAPI - PEP249
 -----------------------------------
 
